@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="" />
+    <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/commerce/layout/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/commerce/pages/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/commerce/partial/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +23,69 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/commerce/pages/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding>
+                <element signature="e#438#489#0#HTML" expanded="true" />
+                <element signature="e#854#905#0#HTML" expanded="true" />
+                <element signature="e#1267#1318#0#HTML" expanded="true" />
+                <element signature="e#1605#2274#0#HTML" />
+                <element signature="e#1782#1839#0#HTML" expanded="true" />
+                <element signature="e#2355#9412#0#HTML" />
+                <element signature="e#2683#9401#0#HTML" />
+                <element signature="e#9496#10316#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/commerce/layout/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/commerce/partial/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-60">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#49#77#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +116,6 @@
         <option value="$PROJECT_DIR$/database/seeds/AttributeValuesTableSeed.php" />
         <option value="$PROJECT_DIR$/app/Models/Attribute.php" />
         <option value="$PROJECT_DIR$/resources/views/commerce/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Models/Product.php" />
         <option value="$PROJECT_DIR$/database/factories/ProductTableFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" />
@@ -54,6 +123,11 @@
         <option value="$PROJECT_DIR$/database/seeds/ProductSeedTest.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/commerce/pages/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/commerce/layout/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/commerce/partial/menu.blade.php" />
       </list>
     </option>
   </component>
@@ -181,10 +255,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="135" />
+    <option name="x" value="151" />
+    <option name="y" value="127" />
     <option name="width" value="1161" />
-    <option name="height" value="599" />
+    <option name="height" value="625" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -203,7 +277,36 @@
             <path>
               <item name="marlin.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="marlin.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marlin.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marlin.loc" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marlin.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marlin.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marlin.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marlin.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marlin.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marlin.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marlin.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marlin.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="commerce" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,6 +323,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/commerce/pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/shop" />
       <recent name="$PROJECT_DIR$/public/restorant" />
@@ -257,15 +363,16 @@
       <workItem from="1561304261941" duration="18882000" />
       <workItem from="1561395035708" duration="15133000" />
       <workItem from="1561457085982" duration="3499000" />
-      <workItem from="1561537501019" duration="1305000" />
+      <workItem from="1561537501019" duration="4476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38819000" />
+    <option name="totallyTimeSpent" value="41990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="135" width="1161" height="599" extended-state="0" />
+    <frame x="151" y="127" width="1161" height="625" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32107624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -280,7 +387,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21610169" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.14717741" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -313,11 +420,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_02_15_204651_create_categories_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_12_190029_add_views_to_products.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_11_173554_create_categories_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_16_131426_create_coupons_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_15_190306_create_ratings_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_23_094847_add_token_to_users.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_28_135252_create_attribute_values_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_28_132041_create_attributes_table.php" />
@@ -351,7 +453,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Commerce/CartController.php" />
     <entry file="file://$PROJECT_DIR$/app/Models/Attribute.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/commerce/show.blade.php" />
     <entry file="file://$PROJECT_DIR$/database/seeds/AttributeTableSeed.php" />
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
@@ -399,6 +500,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/shop/css/animate.css">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Commerce/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#49#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Документи/shop/essence/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="true" selection-end-line="549" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/commerce/layout/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/commerce/partial/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/commerce/pages/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#438#489#0#HTML" expanded="true" />
+            <element signature="e#854#905#0#HTML" expanded="true" />
+            <element signature="e#1267#1318#0#HTML" expanded="true" />
+            <element signature="e#1605#2274#0#HTML" />
+            <element signature="e#1782#1839#0#HTML" expanded="true" />
+            <element signature="e#2355#9412#0#HTML" />
+            <element signature="e#2683#9401#0#HTML" />
+            <element signature="e#9496#10316#0#HTML" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
