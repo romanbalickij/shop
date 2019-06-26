@@ -19,30 +19,20 @@
                     <ul>
                         <li><a href="#">Shop</a>
                             <div class="megamenu">
+                                @foreach($categories as $category )
                                 <ul class="single-mega cn-col-4">
-                                    <li class="title">Women's Collection</li>
-                                    <li><a href="shop.html">Dresses</a></li>
-                                    <li><a href="shop.html">Blouses &amp; Shirts</a></li>
-                                    <li><a href="shop.html">T-shirts</a></li>
-                                    <li><a href="shop.html">Rompers</a></li>
-                                    <li><a href="shop.html">Bras &amp; Panties</a></li>
+
+                                    <li class="title">{{$category->name}}</li>
+
+                                @foreach($category->children as $children)
+
+
+                                    <li><a href="shop.html">{{$children->name}}</a></li>
+                                @endforeach
+
                                 </ul>
-                                <ul class="single-mega cn-col-4">
-                                    <li class="title">Men's Collection</li>
-                                    <li><a href="shop.html">T-Shirts</a></li>
-                                    <li><a href="shop.html">Polo</a></li>
-                                    <li><a href="shop.html">Shirts</a></li>
-                                    <li><a href="shop.html">Jackets</a></li>
-                                    <li><a href="shop.html">Trench</a></li>
-                                </ul>
-                                <ul class="single-mega cn-col-4">
-                                    <li class="title">Kid's Collection</li>
-                                    <li><a href="shop.html">Dresses</a></li>
-                                    <li><a href="shop.html">Shirts</a></li>
-                                    <li><a href="shop.html">T-shirts</a></li>
-                                    <li><a href="shop.html">Jackets</a></li>
-                                    <li><a href="shop.html">Trench</a></li>
-                                </ul>
+                                @endforeach
+
                                 <div class="single-mega cn-col-4">
                                     <img src="img/bg-img/bg-6.jpg" alt="">
                                 </div>
