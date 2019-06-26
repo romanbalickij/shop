@@ -21,20 +21,14 @@
                             <div class="megamenu">
                                 @foreach($categories as $category )
                                 <ul class="single-mega cn-col-4">
-
                                     <li class="title">{{$category->name}}</li>
-
                                 @foreach($category->children as $children)
-
-
                                     <li><a href="shop.html">{{$children->name}}</a></li>
                                 @endforeach
-
                                 </ul>
                                 @endforeach
-
                                 <div class="single-mega cn-col-4">
-                                    <img src="img/bg-img/bg-6.jpg" alt="">
+                                    <img src="/shop/img/bg-img/bg-6.jpg" alt="">
                                 </div>
                             </div>
                         </li>
