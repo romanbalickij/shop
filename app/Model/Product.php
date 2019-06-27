@@ -24,7 +24,5 @@ class Product extends Model
            $result = $this->original_price - $discount;
            return $result;
         }
-
-
     }
 }
