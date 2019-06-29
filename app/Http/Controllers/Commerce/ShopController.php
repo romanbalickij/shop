@@ -11,9 +11,32 @@ class ShopController extends Controller
 {
 
     public function index() {
+        $products    = Product::orderBy('created_at', 'desc')->paginate(10);
+        return view('commerce.pages.shop', compact('products'));
 
-        $products    = Product::orderBy('created_at', 'desc')->get();
-        $categories  = Category::whereNull('parent_id')->with('children')->get();
-        return view('commerce.pages.shop', compact('products', 'categories'));
+//
+// // це для адмінки яки категории  и пид категории є в продукта
+//        $product = Product::with('categories.parent')->findOrFail(176);
+//        $category = $product->categories->groupBy('parent_id');
+//        @foreach($category  as  $children)
+//
+//
+//
+//            Parent {{$children->first()->parent->name}}<br>
+//        @foreach($children as $child)
+//        {{$child->name}}
+//        @endforeach
+//
+//
+//
+//    @endforeach
+
+    }
+
+    public function category($slug)
+    {
+       $category = Category::where('slug', $slug)->first();
+       $products = $category->products()->paginate(10);
+        return view('commerce.pages.shop', compact('products'));
     }
 }

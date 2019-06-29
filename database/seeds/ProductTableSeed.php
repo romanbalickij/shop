@@ -12,6 +12,12 @@ class ProductTableSeed extends Seeder
      */
     public function run()
     {
-          factory(Product::class,3)->create();
+        // factory(Product::class,5)->create();
+
+        factory(Product::class, 30)->create()->each(function($product) {
+            $product->categories()->sync(
+                \App\Model\Category::whereNotNull('parent_id')->with('children')->get()->random(1)
+            );
+        });
     }
 }

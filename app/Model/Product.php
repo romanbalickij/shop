@@ -13,7 +13,7 @@ class Product extends Model
     public function getImage() {
 
         if($this->image != null) {
-            return  'shop/img/product-img/'.$this->image;
+            return  '/shop/img/product-img/'.$this->image;
         }
     }
 
@@ -25,4 +25,10 @@ class Product extends Model
            return $result;
         }
     }
+
+    public function categories() {
+        return $this->belongsToMany(Category::class,'product_category');
+    }
+
+
 }

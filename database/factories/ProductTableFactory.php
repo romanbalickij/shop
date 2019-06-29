@@ -3,11 +3,14 @@
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
 
+use App\Model\Category;
 use App\Model\Product;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
 $factory->define(Product::class, function (Faker $faker) {
+
+
     $image = [
         'product-1.jpg','product-2.jpg','product-3.jpg','product-4.jpg','product-5.jpg',
         'product-6.jpg','product-7.jpg','product-8.jpg','product-9.jpg','product-big-1.jpg'

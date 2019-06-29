@@ -15,7 +15,7 @@
                         <a href="#">{{$category->name}}</a>
                         <ul class="sub-menu collapse show" id="clothing">
                     @foreach($category->children as $children)
-                        <li><a href="#">{{$children->name}}</a></li>
+                        <li><a href={{route('shop.category', $children->slug)}}>{{$children->name}}</a></li>
                     @endforeach
                         </ul>
                       </li>

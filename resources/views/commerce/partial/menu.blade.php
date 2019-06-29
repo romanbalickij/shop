@@ -23,7 +23,7 @@
                                 <ul class="single-mega cn-col-4">
                                     <li class="title">{{$category->name}}</li>
                                 @foreach($category->children as $children)
-                                    <li><a href="shop.html">{{$children->name}}</a></li>
+                                    <li><a href="{{route('shop.category', $children->slug)}}">{{$children->name}}</a></li>
                                 @endforeach
                                 </ul>
                                 @endforeach
