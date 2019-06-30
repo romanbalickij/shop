@@ -1,5 +1,6 @@
 <?php
 
+use App\Model\HotProduct;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,8 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(CategoryTableeSeed::class);
-        $this->call(ProductTableSeed::class);
+       // $this->call(CategoryTableeSeed::class);
+       // $this->call(ProductTableSeed::class);
+          $this->call(HotProductTableSeed::class);
 
     }
 }

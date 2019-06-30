@@ -135,7 +135,7 @@
                                         <!-- Product Image -->
                                         <div class="product-img">
 
-                                            <img src="{{$product->getImage()}}" alt="">                                        <!-- Hover Thumb -->
+                                            <img src="{{$product->getImage($product->image)}}" alt="">                                        <!-- Hover Thumb -->
                                             <!-- Product Badge -->
                                             @if($product->discount_price)
                                                 <div class="product-badge offer-badge">
@@ -150,23 +150,28 @@
 
                                         <!-- Product Description -->
                                         <div class="product-description">
-                                            <span>topshop</span>
                                             <a href="#">
                                                 <h6>{{$product->name}}</h6>
                                             </a>
                                             <p class="product-price">
                                                 @if($product->discount_price)
                                                     <span class="old-price">
-                                                        {{presentPrice($product->getDiscountPrice())}}
-                                                    </span>
+                                                     {{presentPrice($product->original_price)}}
+                                                </span>
+                                                    {{presentPrice($product->getDiscountPrice(
+                                                      $product->discount_price,
+                                                      $product->original_price))
+                                                      }}
+                                                @else
+                                                    {{presentPrice($product->original_price)}}
                                                 @endif
-                                                        {{ presentPrice($product->original_price)}}</p>
+                                            </p>
 
                                             <!-- Hover Content -->
                                             <div class="hover-content">
                                                 <!-- Add to Cart -->
                                                 <div class="add-to-cart-btn">
-                                                    <a href="#" class="btn essence-btn">Add to Cart</a>
+                                                    <a href="#" class="btn essence-btn">View</a>
                                                 </div>
                                             </div>
                                         </div>

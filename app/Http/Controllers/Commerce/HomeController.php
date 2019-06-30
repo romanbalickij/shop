@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Commerce;
 
 use App\Model\Category;
+use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     public function index() {
-        return view('commerce.pages.home', compact('categories'));
+
+        $products = Product::getPopularProduct();
+        return view('commerce.pages.home', compact('products'));
     }
 }

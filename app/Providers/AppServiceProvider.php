@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('commerce.partial.sidebar', function ($view) {
             $view->with('categories', Category::getCategory());
         });
+
     }
 
     /**

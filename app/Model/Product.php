@@ -2,33 +2,29 @@
 
 namespace App\Model;
 
+use App\Traits\DiscountPriceTrait;
+use App\Traits\StoreImageTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    use StoreImageTrait, DiscountPriceTrait;
+
     protected  $fillable = ['name', 'slug', 'description', 'featured', 'image', 'original_price',
     'discount_price', 'quantity', 'views', 'date '];
-
-
-    public function getImage() {
-
-        if($this->image != null) {
-            return  '/shop/img/product-img/'.$this->image;
-        }
-    }
-
-    public function getDiscountPrice() {
-
-        if($this->discount_price !=null) {
-           $discount = $this->original_price / 100 * $this->discount_price ;
-           $result = $this->original_price - $discount;
-           return $result;
-        }
-    }
 
     public function categories() {
         return $this->belongsToMany(Category::class,'product_category');
     }
 
+    public function hotProducts()
+    {
+        return  $this->hasMany(HotProduct::class);
+    }
+
+    public static function  getPopularProduct(){
+
+        return self::orderBy('views','desc')->take(5)->get();
+    }
 
 }

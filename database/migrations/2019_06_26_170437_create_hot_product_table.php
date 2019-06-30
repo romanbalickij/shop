@@ -13,7 +13,7 @@ class CreateHotProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('hot_product', function (Blueprint $table) {
+        Schema::create('hot_products', function (Blueprint $table) {
             $table->increments( 'id' );
             $table->integer( 'product_id' )->unsigned();
             $table->timestamps();

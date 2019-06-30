@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Commerce;
 
 use App\Model\Category;
+use App\Model\HotProduct;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -35,8 +36,16 @@ class ShopController extends Controller
 
     public function category($slug)
     {
-       $category = Category::where('slug', $slug)->first();
+       $category = Category::where('slug', $slug)->firstOrFail();
        $products = $category->products()->paginate(10);
-        return view('commerce.pages.shop', compact('products'));
+       return view('commerce.pages.shop', compact('products'));
     }
+
+    public function hotProduct()
+    {
+        $hot_products = HotProduct::join('products','products.id','=','product_id')->paginate(5);
+
+        return view('commerce.pages.hot_product', compact('hot_products'));
+    }
+
 }
