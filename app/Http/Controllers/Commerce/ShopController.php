@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Commerce;
 
+use App\Model\Brand;
 use App\Model\Category;
 use App\Model\HotProduct;
 use App\Model\Product;
@@ -41,11 +42,20 @@ class ShopController extends Controller
        return view('commerce.pages.shop', compact('products'));
     }
 
+    public function brand($slug)
+    {
+        $brand = Brand::where('slug', $slug)->firstOrfail();
+        $products = $brand->products()->paginate(5);
+        return view('commerce.pages.brand', compact('brand', 'products'));
+
+    }
+
     public function hotProduct()
     {
         $hot_products = HotProduct::join('products','products.id','=','product_id')->paginate(5);
-
         return view('commerce.pages.hot_product', compact('hot_products'));
     }
+
+
 
 }

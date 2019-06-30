@@ -68,13 +68,11 @@
             <!-- Widget Title 2 -->
             <p class="widget-title2 mb-30">Brands</p>
             <div class="widget-desc">
+                @foreach($brands as $brand)
                 <ul>
-                    <li><a href="#">Asos</a></li>
-                    <li><a href="#">Mango</a></li>
-                    <li><a href="#">River Island</a></li>
-                    <li><a href="#">Topshop</a></li>
-                    <li><a href="#">Zara</a></li>
+                    <li><a href="{{route('shop.brand', $brand->slug)}}">{{$brand->name}}</a></li>
                 </ul>
+                @endforeach
             </div>
         </div>
     </div>

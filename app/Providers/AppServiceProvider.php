@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Model\Brand;
 use App\Model\Category;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('commerce.partial.sidebar', function ($view) {
             $view->with('categories', Category::getCategory());
         });
+        view()->composer('commerce.partial.sidebar', function ($view) {
+            $view->with('brands', Brand::getBrand());
+        });
+
 
     }
 

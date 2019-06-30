@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->double( 'discount_price' )->nullable();
             $table->integer('quantity')->unsigned();
             $table->integer('views')->nullable();
+            $table->string('brand_id')->unsigned();
             $table->timestamp('date');
             $table->timestamps();
         });

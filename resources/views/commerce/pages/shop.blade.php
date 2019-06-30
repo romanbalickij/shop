@@ -163,7 +163,7 @@
                                                       $product->original_price))
                                                       }}
                                                 @else
-                                                    {{presentPrice($product->original_price)}}
+                                                     {{presentPrice($product->original_price)}}
                                                 @endif
                                             </p>
 
@@ -171,7 +171,7 @@
                                             <div class="hover-content">
                                                 <!-- Add to Cart -->
                                                 <div class="add-to-cart-btn">
-                                                    <a href="#" class="btn essence-btn">View</a>
+                                                    <a href="{{route('show.product', $product->slug)}}" class="btn essence-btn">View</a>
                                                 </div>
                                             </div>
                                         </div>

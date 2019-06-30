@@ -22,6 +22,11 @@ class Product extends Model
         return  $this->hasMany(HotProduct::class);
     }
 
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
     public static function  getPopularProduct(){
 
         return self::orderBy('views','desc')->take(5)->get();
