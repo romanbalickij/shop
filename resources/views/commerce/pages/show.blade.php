@@ -96,7 +96,6 @@
 
         <!-- Single Product Description -->
         <div class="single_product_desc clearfix">
-            <spa>mango</spa>
             <a>
                 <h2>{{$product->name}}</h2>
             </a>
