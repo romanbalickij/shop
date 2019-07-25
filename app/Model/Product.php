@@ -10,7 +10,13 @@ class Product extends Model
 {
     use StoreImageTrait, DiscountPriceTrait;
 
-    protected  $fillable = ['name', 'slug', 'description', 'featured', 'image', 'original_price',
+    protected $casts = [
+        'quantity'  =>  'integer',
+        'brand_id'  =>  'integer',
+        'featured'  =>  'boolean'
+    ];
+
+    protected  $fillable = ['name', 'slug', 'description','sku' ,'featured', 'image', 'original_price',
     'discount_price', 'quantity', 'views', 'date '];
 
     public function categories() {
@@ -25,6 +31,10 @@ class Product extends Model
     public function brand()
     {
         return $this->belongsTo(Brand::class);
+    }
+
+    public function images() {
+        return $this->hasMany(ProductImage::class);
     }
 
     public static function  getPopularProduct(){
