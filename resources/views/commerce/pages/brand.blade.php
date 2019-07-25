@@ -134,8 +134,16 @@
                                     <div class="single-product-wrapper">
                                         <!-- Product Image -->
                                         <div class="product-img">
-
-                                            <img src="{{$product->getImage($product->image)}}" alt="">                                        <!-- Hover Thumb -->
+                                            <div class="product-img">
+                                                <img src="{{$product->getImage($product->id)}}" alt="">
+                                                <!-- Hover Thumb -->
+                                                <img class="hover-img" src="{{$product->getImage($product->id,'thumbnail')}}" alt="">
+                                                <!-- Favourite -->
+                                                <div class="product-favourite">
+                                                    <a href="#" class="favme fa fa-heart"></a>
+                                                </div>
+                                            </div>
+                                  <!-- Hover Thumb -->
                                             <!-- Product Badge -->
                                             @if($product->discount_price)
                                                 <div class="product-badge offer-badge">

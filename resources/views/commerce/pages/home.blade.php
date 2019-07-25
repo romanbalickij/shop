@@ -36,9 +36,17 @@
                         <!-- Single Product -->
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
+
                             <div class="product-img">
-                                <img src="{{$product->getImage($product->image)}}" alt="">
+                                <img src="{{$product->getImage($product->id)}}" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="{{$product->getImage($product->id,'thumbnail')}}" alt="">
+                                <!-- Favourite -->
+                                <div class="product-favourite">
+                                    <a href="#" class="favme fa fa-heart"></a>
+                                </div>
                             </div>
+
                             <!-- Product Description -->
                             <div class="product-description">
                                 <a href="single-product-details.html">

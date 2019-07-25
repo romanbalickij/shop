@@ -89,7 +89,7 @@
         <!-- Single Product Thumb -->
         <div class="single_product_thumb clearfix">
             <div class=" ">
-                <img src="{{$product->getImage($product->image)}}" alt="">
+                <img src="{{$product->getImage($product->id)}}" alt="">
 
             </div>
         </div>

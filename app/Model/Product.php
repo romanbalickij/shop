@@ -28,6 +28,11 @@ class Product extends Model
         return  $this->hasMany(HotProduct::class);
     }
 
+    public function attributes()
+    {
+        return $this->hasMany(ProductAttribute::class);
+    }
+
     public function brand()
     {
         return $this->belongsTo(Brand::class);
