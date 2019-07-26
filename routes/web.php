@@ -13,4 +13,12 @@ Route::group(['namespace' => 'Commerce'], function (){
    Route::get('/shop/{slug}', 'ShopController@category')->name('shop.category');
    Route::get('/shop/brand/{slug}', 'ShopController@brand')->name('shop.brand');
 
+    /**CartController*/
+  Route::post('/cart', 'CartController@store')->name('cart.store');
+  Route::delete('/cart/{product}', 'CartController@delete')->name('cart.delete');
+
 });
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+

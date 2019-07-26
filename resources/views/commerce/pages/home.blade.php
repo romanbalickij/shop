@@ -49,7 +49,7 @@
 
                             <!-- Product Description -->
                             <div class="product-description">
-                                <a href="single-product-details.html">
+                                <a href="{{route('show.product', $product->slug)}}">
                                     <h6>{{$product->name}}</h6>
                                 </a>
                                 <p class="product-price">{{presentPrice($product->original_price)}}</p>

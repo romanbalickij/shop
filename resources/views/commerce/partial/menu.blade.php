@@ -44,8 +44,26 @@
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        @if(!Auth::check())
+                             <li><a href="{{route('register')}}">Register</a></li>
+
+                            <li><a href="{{route('login')}}">Login</a></li>
+                        @else
+                            <li>
+                                <div class="" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                         @endif
                     </ul>
                 </div>
                 <!-- Nav End -->
@@ -71,7 +89,13 @@
             </div>
             <!-- Cart Area -->
             <div class="cart-area">
-                <a href="#" id="essenceCartBtn"><img src="/shop/img/core-img/bag.svg" alt=""> <span>3</span></a>
+                <a href="#" id="essenceCartBtn"><img src="/shop/img/core-img/bag.svg" alt="">
+                    @if(Cart::content()->count() > 0)
+                     <span>{{Cart::content()->count()}}</span></a>
+                    @else
+                      <span></span></a>
+                    @endif
+
             </div>
         </div>
 
