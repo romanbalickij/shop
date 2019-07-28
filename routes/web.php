@@ -14,11 +14,17 @@ Route::group(['namespace' => 'Commerce'], function (){
    Route::get('/shop/brand/{slug}', 'ShopController@brand')->name('shop.brand');
 
     /**CartController*/
-  Route::post('/cart', 'CartController@store')->name('cart.store');
-  Route::delete('/cart/{product}', 'CartController@delete')->name('cart.delete');
+   Route::post('/cart', 'CartController@store')->name('cart.store');
+   Route::delete('/cart/{product}', 'CartController@delete')->name('cart.delete');
 
     /**CheckoutController*/
-  Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+   Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+   Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
+
+    /**StripeController*/
+   Route::post('/stripe', 'StripeController@stripe')->name('stripe');
+
+   Route::get('/thankyou', 'ConfirmationController@index')->name('thankyou');
 
 });
 Auth::routes(['verify' => true]);

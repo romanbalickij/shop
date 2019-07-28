@@ -17,6 +17,7 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="/shop/css/core-style.css">
     <link rel="stylesheet" href="/shop/style.css">
+    <link rel="stylesheet" href="/shop/css/stripe.css">
 
 </head>
 
@@ -126,6 +127,8 @@
 <script src="/shop/js/classy-nav.min.js"></script>
 <!-- Active js -->
 <script src="/shop/js/active.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+@yield('js')
 
 </body>
 
