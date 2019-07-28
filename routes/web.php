@@ -17,6 +17,9 @@ Route::group(['namespace' => 'Commerce'], function (){
   Route::post('/cart', 'CartController@store')->name('cart.store');
   Route::delete('/cart/{product}', 'CartController@delete')->name('cart.delete');
 
+    /**CheckoutController*/
+  Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+
 });
 Auth::routes(['verify' => true]);
 

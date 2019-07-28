@@ -95,9 +95,7 @@
                     @else
                       <span></span></a>
                     @endif
-
             </div>
         </div>
-
     </div>
 </header>
