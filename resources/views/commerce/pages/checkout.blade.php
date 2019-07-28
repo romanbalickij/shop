@@ -27,9 +27,9 @@
                             <h5>Billing Address</h5>
                         </div>
 
-                        <form action="{{route('checkout.store')}}"  method="post">
-                            @csrf
-                            <div class="row">
+                            <form action="{{route('checkout.store')}}" id="payment-form" method="POST">
+                                @csrf
+                                <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="first_name">First Name <span>*</span></label>
                                     <input type="text" name="first_name" class="form-control" id="first_name" value="" >
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+
                     </div>
                 </div>
 
@@ -115,10 +115,35 @@
                             <li><span>Total</span> <span>{{presentPrice(Cart::subtotal())}}</span></li>
 
                         </ul>
-                        <form action="{{route('stripe')}}" id="payment-form" method="POST">
-                          @csrf
 
                             <div id="accordion" role="tablist" class="mb-4">
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-circle-o mr-3"></i>credit card</a>
+                                        </h6>
+                                    </div>
+
+                                </div>
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="card-element">
+                                                Credit or debit card
+                                            </label>
+
+                                            <div id="card-element">
+                                                <!-- A Stripe Element will be inserted here. -->
+                                            </div>
+
+                                            <!-- Used to display form errors. -->
+                                            <div id="card-errors" role="alert"></div>
+
+                                        </div>
+                                          <button type="submit"id="complete-order" class="btn essence-btn">Place Order</button>
+                                        </form>
+                                    </div>
+                                </div>
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
@@ -144,35 +169,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" role="tab" id="headingThree">
-                                        <h6 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-circle-o mr-3"></i>credit card</a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <div class="form-group">
-                                                <label for="card-element">
-                                                    Credit or debit card
-                                                </label>
 
-                                                <div id="card-element">
-                                                    <!-- A Stripe Element will be inserted here. -->
-                                                </div>
-
-                                                <!-- Used to display form errors. -->
-                                                <div id="card-errors" role="alert"></div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
-                            <button type="submit" class="btn essence-btn">Place Order</button>
 
-                        </form>
+
+
                     </div>
                 </div>
             </div>
@@ -229,6 +231,8 @@
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
+        document.getElementById('complete-order').disabled = true;
+
             var options = {
                 address_line1: document.getElementById('address').value,
                 address_city: document.getElementById('city').value,
@@ -241,6 +245,10 @@
                     // Inform the user if there was an error.
                     var errorElement = document.getElementById('card-errors');
                     errorElement.textContent = result.error.message;
+
+
+                    document.getElementById('complete-order').disabled = false;
+
                 } else {
                     // Send the token to your server.
                     stripeTokenHandler(result.token);
