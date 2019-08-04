@@ -32,32 +32,42 @@
                                 <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="first_name">First Name <span>*</span></label>
-                                    <input type="text" name="first_name" class="form-control" id="first_name" value="" >
+                                    <input type="text" name="first_name"
+                                           class="form-control {{$errors->has('first_name') ? 'is-invalid':''}}"
+                                           value="{{old('first_name')}}">
+                                    @if($errors->has('first_name'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('first_name')}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="last_name">Last Name <span>*</span></label>
-                                    <input type="text" name="last_name" class="form-control" id="last_name" value="" >
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="company">Company Name</label>
-                                    <input type="text" name="company" class="form-control" id="company" value="">
+                                    <input type="text" name="last_name" class="form-control {{$errors->has('last_name') ? 'is-invalid' : ''}}"
+                                           id="last_name" value="{{old('last_name')}}" >
+                                    @if($errors->has('last_name'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('last_name')}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="country">Country <span>*</span></label>
-                                    <select class="w-100" id="country">
-                                        <option value="usa">United States</option>
-                                        <option value="uk">United Kingdom</option>
-                                        <option value="ger">Germany</option>
-                                        <option value="fra">France</option>
-                                        <option value="ind">India</option>
-                                        <option value="aus">Australia</option>
-                                        <option value="bra">Brazil</option>
-                                        <option value="cana">Canada</option>
+                                    <select class="w-100" name="country" id="country">
+                                    @foreach($countries as $country)
+                                        <option value="{{$country->id}}">{{$country->country}}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="street_address">Address <span>*</span></label>
-                                    <input type="text" name="address" class="form-control mb-3" id="address" value="">
+                                    <input type="text" name="address" class="form-control mb-3 {{$errors->has('address') ? 'is-invalid' : ''}}"
+                                           id="address" value="{{old('address')}}">
+                                    @if($errors->has('address'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('address')}}
+                                        </div>
+                                    @endif
 {{--                                    <input type="text" class="form-control" id="street_address2" value="">--}}
                                 </div>
                                 <div class="col-12 mb-3">
@@ -66,7 +76,13 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="city">Town/City <span>*</span></label>
-                                    <input type="text" name="city" class="form-control" id="city" value="">
+                                    <input type="text" name="city" class="form-control {{$errors->has('city') ? 'is-invalid' : ''}}"
+                                           id="city" value="{{old('city')}}">
+                                    @if($errors->has('city'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('city')}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="state">Province <span>*</span></label>
@@ -74,11 +90,23 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="phone_number">Phone No <span>*</span></label>
-                                    <input type="number" name="phone" class="form-control" id="phone_number" min="0" value="">
+                                    <input type="text" name="phone" class="form-control {{$errors->has('phone') ? 'is-invalid' : ''}}"
+                                           id="phone_number" min="0" value="{{old('phone')}}">
+                                    @if($errors->has('phone'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('phone')}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-12 mb-4">
                                     <label for="email_address">Email Address <span>*</span></label>
-                                    <input type="email" name="email" class="form-control" id="email_address" value="">
+                                    <input type="text" name="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}"
+                                           id="email_address" value="{{old('email')}}">
+                                    @if($errors->has('email'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('email')}}
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="col-12">

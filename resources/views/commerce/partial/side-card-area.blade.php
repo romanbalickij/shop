@@ -37,7 +37,8 @@
         </div>
 
         <!-- Cart Summary -->
-        <div class="cart-amount-summary">
+          <div class="cart-amount-summary">
+              @if(Cart::count() > 0)
 
             <h2>Summary</h2>
             <ul class="summary-table">
@@ -49,6 +50,10 @@
             <div class="checkout-btn mt-100">
                 <a href="{{route('checkout.index')}}" class="btn essence-btn">check out</a>
             </div>
+              @else
+                  <h1>Your cart is empty</h1>
+              @endif
         </div>
+
     </div>
 </div>

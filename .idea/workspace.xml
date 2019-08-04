@@ -4,9 +4,10 @@
     <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Commerce/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Commerce/CheckoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Commerce/StripeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Commerce/StripeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/commerce/pages/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/pages/checkout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/commerce/pages/thankyou.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/pages/thankyou.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/commerce/partial/side-card-area.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/partial/side-card-area.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +220,12 @@
       <workItem from="1564134224935" duration="16207000" />
       <workItem from="1564306291122" duration="998000" />
       <workItem from="1564307491015" duration="13558000" />
-      <workItem from="1564325230093" duration="1972000" />
+      <workItem from="1564325230093" duration="2659000" />
+      <workItem from="1564391612367" duration="1723000" />
+      <workItem from="1564476957708" duration="1922000" />
+      <workItem from="1564582939473" duration="1602000" />
+      <workItem from="1564841017301" duration="9272000" />
+      <workItem from="1564922453823" duration="9101000" />
     </task>
     <servers />
   </component>

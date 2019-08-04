@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
           $this->call(AttributesTableSeeder::class);
           $this->call(AttributeValuesTableSeeder::class);
           $this->call(ProductImageTableSeed::class);
+          $this->call(CountryTableSeed::class);
 
     }
 }
