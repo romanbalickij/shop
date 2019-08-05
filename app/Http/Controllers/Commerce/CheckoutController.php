@@ -22,24 +22,15 @@ class CheckoutController extends Controller
 
     public function store(CheckoutRequest $request)
     {
-
+        if(Product::productsAreNoLongerAvailable()) {
+            return redirect()->back()->withErrors('error_message', 'Unfortunately, the product is no longer available');
+        }
 
 
         try {
             Product::checkoutDetailsCart($request->stripeToken);
-            Order::create([
-                'first_name' => $request->first_name,
-                'last_name'  => $request->last_name,
-                'country_id' => $request->country,
-                'address'    => $request->address,
-                'postal_code' =>$request->postal_code,
-                'city'       => $request->city,
-                'province'   => $request->province,
-                'phone'      => $request->phone,
-                'email'      => $request->email,
-                'subtotal'   => Cart::subtotal() ,
-
-            ]);
+            Order::createOrders($request);
+            Product::decreaseQuantities();
             Cart::destroy();
             return redirect()->route('thankyou')->with('success', 'Thank you! Your payment has been successful');
 

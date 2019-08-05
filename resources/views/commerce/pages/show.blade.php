@@ -15,6 +15,7 @@
             <a>
                 <h2>{{$product->name}}</h2>
             </a>
+            <i>{{$product->stock()}}</i>
                 @if(session()->has('success'))
                     <div class="alert alert-success">
                         {{session()->get('success')}}
@@ -66,7 +67,9 @@
                        <input type="hidden" name="price" value="{{$product->original_price}}">
                     @endif
                     <!-- Cart -->
+                    @if($product->quantity > 0)
                     <button type="submit"  class="btn essence-btn">Add to cart</button>
+                    @endif
                     <!-- Favourite -->
                     <div class="product-favourite ml-4">
                         <a href="" class="favme fa fa-heart"></a>

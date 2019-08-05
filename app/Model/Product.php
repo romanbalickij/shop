@@ -67,6 +67,44 @@ class Product extends Model
         ]);
 
     }
+    public function stock(){
 
+        if($this->quantity > 0) {
+            return 'IN Stock';
+        }
+           return 'End Stock';
+    }
+
+    public static function cartContent()
+    {
+        if(!empty(Cart::content())){
+            foreach (Cart::content() as $product){
+                return $product;
+            }
+        }
+
+    }
+
+    public static function  decreaseQuantities(){
+        foreach (Cart::content() as $cartProduct) {
+            $product = Product::find($cartProduct->model->id);
+            $product->quantity  = $product->quantity - $cartProduct->qty;
+            $product->save();
+
+          //  $product->update(['quantity' => $product->quantity - $cartProduct->qty]);
+        }
+
+    }
+
+    public static function  productsAreNoLongerAvailable(){
+        foreach (Cart::content() as $productInCart) {
+            $product = Product::findOrFail($productInCart->id);
+
+            if ($product->quantity < $productInCart->qty) {
+                return true;
+            }
+        }
+           return false;
+    }
 
 }

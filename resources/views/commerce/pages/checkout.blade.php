@@ -26,7 +26,11 @@
                         <div class="cart-page-heading mb-30">
                             <h5>Billing Address</h5>
                         </div>
-
+                        @if(session()->has('error_message'))
+                            <div class="alert alert-success">
+                                {{session()->get('error_message')}}
+                            </div>
+                        @endif
                             <form action="{{route('checkout.store')}}" id="payment-form" method="POST">
                                 @csrf
                                 <div class="row">
@@ -72,7 +76,13 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="postcode">Postcode <span>*</span></label>
-                                    <input type="text" name="postalcode" class="form-control" id="postalcode" value="">
+                                    <input type="text" name="postalcode" class="form-control {{$errors->has('postalcode') ? 'is-invalid' : ''}}"
+                                           id="postalcode" value="">
+                                    @if($errors->has('postalcode'))
+                                        <div class="invalid-feedback">
+                                            {{$errors->first('postalcode')}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="city">Town/City <span>*</span></label>
