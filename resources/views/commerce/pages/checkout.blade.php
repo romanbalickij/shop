@@ -1,6 +1,7 @@
 @extends('commerce.layout.app')
 
 @section('content')
+  @if(Cart::count() > 0)
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb_area bg-img" style="background-image: url(/shop/img/bg-img/breadcumb.jpg);">
         <div class="container h-100">
@@ -219,7 +220,18 @@
         </div>
     </div>
     <!-- ##### Checkout Area End ##### -->
+@else
+      <br>
+      <br>
+      <br>
+      <div class="text-center">
+             <h1>
+                 <p>You have not added this product to the cart</p>
+             </h1>
+      </div>
 
+
+@endif
 @endsection
 
 @section('js')

@@ -12,10 +12,22 @@ class Order extends Model
         'email', 'subtotal', 'payment_gateway', 'shipped'
     ];
 
+    public function products(){
+        return $this->belongsToMany(Product::class,
+            'order_products', 'order_id', 'product_id')->withPivot('quantity','price');
+    }
+
+    public  function createOrderProduct() {
+            foreach (Cart::content() as $product){
+                $this->products()->attach($product->id, ['quantity'=> $product->qty, 'price' => $product->price]);
+            }
+
+    }
+
     public static function createOrders($data)
     {
         if($data !=null) {
-            Order::create([
+        $order =     Order::create([
                 'first_name' => $data->first_name,
                 'last_name'  => $data->last_name,
                 'country_id' => $data->country,
@@ -28,7 +40,7 @@ class Order extends Model
                 'subtotal'   => Cart::subtotal() ,
             ]);
         }
-
+     return $order;
 
     }
 }

@@ -9,9 +9,11 @@ Route::group(['namespace' => 'Commerce'], function (){
 
      /**ShopController **/
    Route::get('/Shop' , 'ShopController@index')->name('shop.index');
+   Route::post('/Shop' , 'ShopController@index')->name('shop.sort');
    Route::get('/shop/sale', 'ShopController@hotProduct')->name('shop.hotProduct');
    Route::get('/shop/{slug}', 'ShopController@category')->name('shop.category');
    Route::get('/shop/brand/{slug}', 'ShopController@brand')->name('shop.brand');
+   Route::post('/shop/sort', 'ShopController@sort')->name('sort.product');
 
     /**CartController*/
    Route::post('/cart', 'CartController@store')->name('cart.store');
@@ -21,8 +23,7 @@ Route::group(['namespace' => 'Commerce'], function (){
    Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
    Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
-    /**StripeController*/
-   Route::post('/stripe', 'StripeController@stripe')->name('stripe');
+
 
    Route::get('/thankyou', 'ConfirmationController@index')->name('thankyou');
 

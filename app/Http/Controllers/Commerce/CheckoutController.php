@@ -17,6 +17,7 @@ class CheckoutController extends Controller
     public function index()
     {
        $countries = Country::all();
+
        return view('commerce.pages.checkout', compact('countries'));
     }
 
@@ -29,7 +30,8 @@ class CheckoutController extends Controller
 
         try {
             Product::checkoutDetailsCart($request->stripeToken);
-            Order::createOrders($request);
+            $order = Order::createOrders($request);
+            $order->createOrderProduct();
             Product::decreaseQuantities();
             Cart::destroy();
             return redirect()->route('thankyou')->with('success', 'Thank you! Your payment has been successful');

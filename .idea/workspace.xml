@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/shop/css/sort-price.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Commerce/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Commerce/CheckoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Commerce/StripeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Checkout/CheckoutRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Checkout/CheckoutRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Commerce/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Commerce/ShopController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/commerce/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/layout/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/commerce/pages/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/pages/checkout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/commerce/pages/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/pages/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/commerce/partial/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commerce/partial/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/shop/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -170,6 +172,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/shop/css" />
+      <recent name="$PROJECT_DIR$/storage" />
       <recent name="$PROJECT_DIR$/public/shop" />
       <recent name="$PROJECT_DIR$/public/restorant" />
       <recent name="$PROJECT_DIR$" />
@@ -230,7 +234,13 @@
       <workItem from="1564922453823" duration="10006000" />
       <workItem from="1564994677740" duration="1694000" />
       <workItem from="1565006760999" duration="10330000" />
-      <workItem from="1565024516532" duration="5173000" />
+      <workItem from="1565024516532" duration="6415000" />
+      <workItem from="1565081458290" duration="30000" />
+      <workItem from="1565083009756" duration="626000" />
+      <workItem from="1565087378541" duration="9000" />
+      <workItem from="1565094547034" duration="15225000" />
+      <workItem from="1565116641533" duration="384000" />
+      <workItem from="1565171759799" duration="17660000" />
     </task>
     <servers />
   </component>
@@ -262,6 +272,11 @@
           <url>file://$PROJECT_DIR$/resources/views/auth/register.blade.php</url>
           <line>7</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/commerce/partial/sidebar.blade.php</url>
+          <line>55</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

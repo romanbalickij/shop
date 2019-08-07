@@ -8,12 +8,36 @@ use App\Model\HotProduct;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+use function GuzzleHttp\Promise\queue;
 
 class ShopController extends Controller
 {
 
-    public function index() {
-        $products    = Product::orderBy('created_at', 'desc')->paginate(10);
+    public function index(Request $request) {
+
+
+        $products = Product::where(function ($query) use ($request){
+            $brandId  = $request->has('brands') ? $request->brands : null;
+            $min      = $request->has('min')    ? $request->min    : null;
+            $max      = $request->has('max')    ? $request->max    : null;
+
+
+            if(isset($min)){
+                $query-> where('original_price','<=',$max);
+                $query-> Where('original_price','>=',$min);
+            }
+            if(isset($brandId)) {
+                $query->whereIn('brand_id', $brandId);
+           }
+
+
+              $query->orderBy('created_at', 'desc');
+
+        })->paginate(10);
+
+
+       // $products    = Product::orderBy('created_at', 'desc')->paginate(10);
         return view('commerce.pages.shop', compact('products'));
 
 //
@@ -56,6 +80,15 @@ class ShopController extends Controller
         return view('commerce.pages.hot_product', compact('hot_products'));
     }
 
+    public function sort(Request $request) {
+
+
+
+
+        return view('commerce.pages.shop', compact('products'));
+
+
+    }
 
 
 }

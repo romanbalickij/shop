@@ -25,27 +25,27 @@ class Product extends Model
         return $this->belongsToMany(Category::class,'product_category');
     }
 
-    public function hotProducts()
-    {
+    public function hotProducts(){
         return  $this->hasMany(HotProduct::class);
     }
 
-    public function attributes()
-    {
+    public function attributes(){
         return $this->hasMany(ProductAttribute::class);
     }
 
-    public function brand()
-    {
+    public function brand(){
         return $this->belongsTo(Brand::class);
     }
 
     public function images() {
         return $this->hasMany(ProductImage::class);
     }
+    public function orders(){
+        return $this->belongsToMany(Order::class,
+            'order_products','product_id','order_id')->withPivot('quantity','price');
+    }
 
     public static function  getPopularProduct(){
-
         return self::orderBy('views','desc')->take(5)->get();
     }
 
@@ -75,16 +75,6 @@ class Product extends Model
            return 'End Stock';
     }
 
-    public static function cartContent()
-    {
-        if(!empty(Cart::content())){
-            foreach (Cart::content() as $product){
-                return $product;
-            }
-        }
-
-    }
-
     public static function  decreaseQuantities(){
         foreach (Cart::content() as $cartProduct) {
             $product = Product::find($cartProduct->model->id);
@@ -106,5 +96,7 @@ class Product extends Model
         }
            return false;
     }
+
+
 
 }

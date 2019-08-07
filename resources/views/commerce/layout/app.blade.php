@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/shop/css/core-style.css">
     <link rel="stylesheet" href="/shop/style.css">
     <link rel="stylesheet" href="/shop/css/stripe.css">
+    <link rel="stylesheet" href="/shop/css/sort-price">
 
 </head>
 
