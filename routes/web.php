@@ -8,12 +8,11 @@ Route::group(['namespace' => 'Commerce'], function (){
    Route::get('/show/{slug}', 'HomeController@show')->name('show.product');
 
      /**ShopController **/
-   Route::get('/Shop' , 'ShopController@index')->name('shop.index');
-   Route::post('/Shop' , 'ShopController@index')->name('shop.sort');
-   Route::get('/shop/sale', 'ShopController@hotProduct')->name('shop.hotProduct');
-   Route::get('/shop/{slug}', 'ShopController@category')->name('shop.category');
-   Route::get('/shop/brand/{slug}', 'ShopController@brand')->name('shop.brand');
-   Route::post('/shop/sort', 'ShopController@sort')->name('sort.product');
+   Route::get('/Shop' ,      'ShopController@index')->name('shop.index');
+   Route::post('/Shop' ,     'ShopController@index')->name('shop.sort');
+   Route::get('/shop/sale',  'ShopController@hotProduct')->name('shop.hotProduct');
+   Route::get('/shop/{slug}','ShopController@category')->name('shop.category');
+   Route::post('/shop/search','ShopController@search')->name('shop.search');
 
     /**CartController*/
    Route::post('/cart', 'CartController@store')->name('cart.store');

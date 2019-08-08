@@ -98,5 +98,45 @@ class Product extends Model
     }
 
 
+    public static function filterBrandAndPrice($request)
+    {
+        $products = Product::where(function ($query) use ($request){
+            $brandId  = $request->has('brands') ? $request->brands : null;
+            $min      = $request->has('min')    ? $request->min    : null;
+            $max      = $request->has('max')    ? $request->max    : null;
+
+            if(isset($min)){
+                $query-> where('original_price','<=',$max);
+                $query-> Where('original_price','>=',$min);
+            }
+            if(isset($brandId)) {
+                $query->whereIn('brand_id', $brandId);
+            }
+            $query->orderBy('created_at', 'desc');
+
+        })->paginate(10);
+
+        return $products;
+    }
+
+    public static function sortProduct($request, $number)
+    {
+        switch ($request->sort) {
+            case 'rated':
+                $result = Product::orderBy('views', 'desc')->paginate($number);
+                break;
+            case 'newest':
+                $result  = Product::orderBy('date', 'desc')->paginate($number);
+                break;
+            case 'expensive':
+                $result  = Product::orderBy('original_price', 'desc')->paginate($number);
+                break;
+            case 'cheap':
+                $result  = Product::orderBy('original_price', 'asc')->paginate($number);
+                break;
+        }
+        return $result;
+
+    }
 
 }

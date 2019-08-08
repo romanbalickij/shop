@@ -16,29 +16,12 @@ class ShopController extends Controller
 
     public function index(Request $request) {
 
-
-        $products = Product::where(function ($query) use ($request){
-            $brandId  = $request->has('brands') ? $request->brands : null;
-            $min      = $request->has('min')    ? $request->min    : null;
-            $max      = $request->has('max')    ? $request->max    : null;
-
-
-            if(isset($min)){
-                $query-> where('original_price','<=',$max);
-                $query-> Where('original_price','>=',$min);
-            }
-            if(isset($brandId)) {
-                $query->whereIn('brand_id', $brandId);
-           }
-
-
-              $query->orderBy('created_at', 'desc');
-
-        })->paginate(10);
-
-
-       // $products    = Product::orderBy('created_at', 'desc')->paginate(10);
-        return view('commerce.pages.shop', compact('products'));
+        if($request->has('sort')) {
+            $products = Product::sortProduct($request, 10);
+            return view('commerce.pages.shop', compact('products'));
+        }
+          $products = Product::filterBrandAndPrice($request);
+          return view('commerce.pages.shop', compact('products'));
 
 //
 // // це для адмінки яки категории  и пид категории є в продукта
@@ -66,28 +49,21 @@ class ShopController extends Controller
        return view('commerce.pages.shop', compact('products'));
     }
 
-    public function brand($slug)
-    {
-        $brand = Brand::where('slug', $slug)->firstOrfail();
-        $products = $brand->products()->paginate(5);
-        return view('commerce.pages.brand', compact('brand', 'products'));
-
-    }
-
     public function hotProduct()
     {
         $hot_products = HotProduct::join('products','products.id','=','product_id')->paginate(5);
         return view('commerce.pages.hot_product', compact('hot_products'));
     }
 
-    public function sort(Request $request) {
+    public function search(Request $request)
+    {
+                $products   = Product::where('name', 'like','%'.$request->search.'%')
+                    ->orWhere('description', 'like', '%'.$request->search.'%')
+                    ->orWhere('sku', 'like', '%'.$request->search.'%')
+                    ->orderBy('id', 'desc')
+                    ->get();
 
-
-
-
-        return view('commerce.pages.shop', compact('products'));
-
-
+       return view('commerce.pages.search_result', compact('products'));
     }
 
 

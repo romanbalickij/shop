@@ -113,14 +113,15 @@
                                         <!-- Sorting -->
                                         <div class="product-sorting d-flex">
                                             <p>Sort by:</p>
-                                            <form action="#" method="get">
-                                                <select name="select" id="sortByselect">
-                                                    <option value="value">Highest Rated</option>
-                                                    <option value="value">Newest</option>
-                                                    <option value="value">Price: $$ - $</option>
-                                                    <option value="value">Price: $ - $$</option>
+                                            <form action="{{route('shop.sort')}}" method="POST">
+                                                @csrf
+                                                <select name="sort" id="catId">
+                                                    <option value="rated">Highest Rated</option>
+                                                    <option value="newest">Newest</option>
+                                                    <option value="expensive">from expensive to cheap</option>
+                                                    <option value="cheap">from cheap to expensive</option>
                                                 </select>
-                                                <input type="submit" class="d-none" value="">
+                                                <button type="submit" class="btn btn-light">Sort</button>
                                             </form>
                                         </div>
                                     </div>
