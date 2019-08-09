@@ -57,11 +57,11 @@ class ShopController extends Controller
 
     public function search(Request $request)
     {
-                $products   = Product::where('name', 'like','%'.$request->search.'%')
-                    ->orWhere('description', 'like', '%'.$request->search.'%')
-                    ->orWhere('sku', 'like', '%'.$request->search.'%')
-                    ->orderBy('id', 'desc')
-                    ->get();
+        $products   = Product::where('name', 'like','%'.$request->search.'%')
+            ->orWhere('description', 'like', '%'.$request->search.'%')
+            ->orWhere('sku', 'like', '%'.$request->search.'%')
+            ->orderBy('id', 'desc')
+            ->get();
 
        return view('commerce.pages.search_result', compact('products'));
     }
