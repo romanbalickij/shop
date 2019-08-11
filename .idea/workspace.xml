@@ -2,49 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Traits/FlashMessages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/AdminLTE.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/skin-purple.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/ionicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/ionicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/ionicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/fonts/ionicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/img/avatar04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/img/avatar3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/img/avatar5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/img/photo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/img/photo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/img/photo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/adminlte.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Contracts/BaseContract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +238,7 @@
       <workItem from="1565346505043" duration="1509000" />
       <workItem from="1565350748529" duration="3680000" />
       <workItem from="1565369311816" duration="173000" />
-      <workItem from="1565511057468" duration="2895000" />
+      <workItem from="1565511057468" duration="5898000" />
     </task>
     <servers />
   </component>
