@@ -29,5 +29,7 @@ Route::group(['namespace' => 'Commerce'], function (){
 });
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::group(['namespace' => 'Admin'], function (){
+    Route::get('Admin', 'HomeController@index')->name('admin.index');
+});
 
