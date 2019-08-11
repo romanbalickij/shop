@@ -29,7 +29,10 @@ Route::group(['namespace' => 'Commerce'], function (){
 });
 Auth::routes(['verify' => true]);
 
-Route::group(['namespace' => 'Admin'], function (){
+Route::group(['namespace' => 'Admin', 'prefix' => 'Admin'], function (){
     Route::get('Admin', 'HomeController@index')->name('admin.index');
+
+    Route::get('/settings', 'SettingController@index')->name('admin.settings');
+    Route::post('/settings', 'SettingController@update')->name('admin.settings.update');
 });
 

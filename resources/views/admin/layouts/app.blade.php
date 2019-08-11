@@ -101,13 +101,7 @@ desired effect
             </div>
 
             <!-- Sidebar Menu -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">Навигация</li>
-                <!-- Optionally, you can add icons to the links -->
-                <li><a href="photos/index.html"><i class="fa fa-image"></i> <span>Все картинки</span></a></li>
-                <li><a href="categories/index.html"><i class="fa fa-list"></i> <span>Категории</span></a></li>
-                <li><a href="users/index.html"><i class="fa fa-group"></i> <span>Пользователи</span></a></li>
-            </ul>
+          @include('admin.partials.sidebar_menu')
             <!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->

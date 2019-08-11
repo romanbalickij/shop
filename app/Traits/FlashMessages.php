@@ -40,7 +40,7 @@ trait FlashMessages
                 array_push($this->$model, $value);
             }
         } else {
-            array_push($type->$model, $message);
+            array_push($this->$model, $message);
         }
     }
 
