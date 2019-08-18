@@ -30,4 +30,10 @@ class Category extends Model
         return $this->belongsToMany(Product::class,'product_category');
     }
 
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = $value;
+        $this->attributes['slug'] = str_slug($value);
+    }
+
 }
