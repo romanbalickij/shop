@@ -22,13 +22,13 @@
                                 <i class="fa fa-times"></i></button>
                         </div>
                     </div>
-                    @include('admin.partials.flash')
-
                     <div class="box-body">
                         <div class="">
                             <div class="box-header">
-                                <h2 class="box-title">Create Category</h2>
+                                <h2 class="box-title">Edit Category</h2>
                             </div>
+                        @include('admin.partials.flash')
+                            <!-- /.box-header -->
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -37,28 +37,33 @@
                                         @endforeach
                                     </ul>
                                 </div>
-                        @endif
-                            <!-- /.box-header -->
+                            @endif
                             <div class="box-body">
                                 <div class="col-md-6">
-                                    <form action="{{route('category.store')}}" method="Post">
+                                    <form action="{{route('category.update')}}" method="POST">
+                                        @method('PATCH')
                                         @csrf
+
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Name</label>
-                                            <input type="text"  name="name" class="form-control" id="exampleInputEmail1" >
+                                            <label for="exampleInputEmail1">Название</label>
+                                            <input class="form-control " type="text" name="name" id="name" value="{{ old('name', $targetCategory->name) }}"/>
+                                            <input type="hidden" name="id" value="{{ $targetCategory->id }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="parent">Parent Category <span class="m-l-5 text-danger"> *</span></label>
-                                            <select id=parent class="form-control custom-select mt-15 @error('parent_id') is-invalid @enderror" name="parent_id">
+                                            <select id=parent class="form-control custom-select mt-15" name="parent_id">
                                                 <option value="0">Select a parent category</option>
                                                 @foreach($categories as $category)
-                                                    <option value="{{ $category->id }}"> {{ $category->name }} </option>
+                                                @if ($targetCategory->parent_id == $category->id)
+                                                        <option value="{{ $category->id }}" selected> {{ $category->name }} </option>
+                                                @else
+                                                        <option value="{{ $category->id }}"> {{ $category->name }} </option>
+                                                @endif
                                                 @endforeach
                                             </select>
-                                            @error('parent_id') {{ $message }} @enderror
-
+                                        </div>
                                         <div class="form-group">
-                                            <button class="btn btn-success">Create</button>
+                                            <button class="btn btn-warning">Update</button>
                                         </div>
                                     </form>
                                 </div>

@@ -38,7 +38,7 @@ class CategoryRepository extends BaseRepository  implements CategoryContract
 
   public function createCategory($params)
   {
-        $this->create($params);
+      return  $category =  $this->create($params);
   }
 
   public function updateCategory($params)

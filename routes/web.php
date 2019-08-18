@@ -30,12 +30,16 @@ Auth::routes(['verify' => true]);
 Route::group(['namespace' => 'Admin', 'prefix' => 'Admin'], function (){
     Route::get('/', 'HomeController@index')->name('admin.index');
 
-    Route::get('/settings', 'SettingController@index')->name('admin.settings');
+    Route::get('/settings',  'SettingController@index')->name('admin.settings');
     Route::post('/settings', 'SettingController@update')->name('admin.settings.update');
 
          /**CategoryController**/
-    Route::get('/category', 'CategoryController@index')->name('category.index');
-    Route::get('/category/create', 'CategoryController@create')->name('category.create');
-    Route::post('/category/create', 'CategoryController@store')->name('category.store');
+    Route::get('/category',          'CategoryController@index')->name('category.index');
+    Route::post('/category/create',  'CategoryController@store')->name('category.store');
+    Route::get('/category/create',   'CategoryController@create')->name('category.create');
+    Route::patch('/category/edit',   'CategoryController@update')->name('category.update');
+    Route::get('/category/edit/{id}','CategoryController@edit' )->name('category.edit');
+    Route::delete('/category/delete/{id}', 'CategoryController@delete')->name('category.delete');
+
 });
 

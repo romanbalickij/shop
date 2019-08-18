@@ -28,6 +28,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect. -->
     <link rel="stylesheet" href="/admin/assets/css/skin-purple.min.css">
+    <link rel="stylesheet" href="/admin/assets/css/admin.css">
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -174,7 +177,7 @@ desired effect
             <!-- /.tab-pane -->
             <!-- Settings tab content -->
             <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
+
                     <h3 class="control-sidebar-heading">General Settings</h3>
 
                     <div class="form-group">
@@ -188,7 +191,7 @@ desired effect
                         </p>
                     </div>
                     <!-- /.form-group -->
-                </form>
+
             </div>
             <!-- /.tab-pane -->
         </div>

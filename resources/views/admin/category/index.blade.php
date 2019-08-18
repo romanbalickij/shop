@@ -47,17 +47,18 @@
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->name}}</td>
                                         <td>{{$category->slug}}</td>
-                                        <td>{{$category->slug}}</td>
+                                        <td>{{$category->parent->name}}</td>
                                         <td>
-                                            <a href="#" class="btn btn-info">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
-                                            <a href="edit.html" class="btn btn-warning">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
-                                                <i class="fa fa-remove"></i>
-                                            </a>
+
+                                            <td><a href="{{route('category.edit',$category->id)}}" class="fa fa-pencil"></a>
+                                                <form method="POST" action="{{route('category.delete',$category->id)}}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="delete">
+                                                        <i class="fa fa-remove"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
                                         </td>
                                     </tr>
 
