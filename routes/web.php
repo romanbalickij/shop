@@ -41,5 +41,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'Admin'], function (){
     Route::get('/category/edit/{id}','CategoryController@edit' )->name('category.edit');
     Route::delete('/category/delete/{id}', 'CategoryController@delete')->name('category.delete');
 
+     /**AttributeController and AttributeValueController*/
+    Route::resource('/attribute', 'AttributeController');
+    Route::resource('/attribute-values', 'AttributeValueController');
+
 });
 

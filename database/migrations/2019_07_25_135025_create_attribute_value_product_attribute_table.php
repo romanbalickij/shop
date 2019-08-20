@@ -17,7 +17,7 @@ class CreateAttributeValueProductAttributeTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('attribute_value_id');
             $table->unsignedInteger('product_attribute_id');
-            $table->foreign('attribute_value_id')->references('id')->on('attribute_values');
+            $table->foreign('attribute_value_id')->references('id')->on('attributes_values');
             $table->foreign('product_attribute_id')->references('id')->on('product_attributes');
             $table->timestamps();
         });

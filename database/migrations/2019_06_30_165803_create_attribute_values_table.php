@@ -13,7 +13,7 @@ class CreateAttributeValuesTable extends Migration
      */
     public function up()
     {
-        Schema::create('attribute_values', function (Blueprint $table) {
+        Schema::create('attributes_values', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('attribute_id');
             $table->foreign('attribute_id')->references('id')->on('attributes');
@@ -30,6 +30,6 @@ class CreateAttributeValuesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attribute_values');
+        Schema::dropIfExists('attributes_values');
     }
 }

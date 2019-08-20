@@ -28,4 +28,12 @@ class AttributeValue extends Model
     {
         return $this->belongsToMany(ProductAttribute::class);
     }
+
+    public function getAttributeName()
+    {
+        if($this->attribute != null) {
+            return $this->attribute->name;
+        }
+           return 'The attribute is offset';
+    }
 }

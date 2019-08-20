@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/css/front.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Contracts/AttributeContract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/AttributeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/axios.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/AttributeValue.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AttributeValue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_30_165803_create_attribute_values_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_30_165803_create_attribute_values_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_25_135025_create_attribute_value_product_attribute_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_25_135025_create_attribute_value_product_attribute_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,7 +175,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/admin/assets/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/admin/assets/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -172,13 +183,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/admin/assets/js" />
       <recent name="$PROJECT_DIR$/public/admin/assets/css" />
       <recent name="$PROJECT_DIR$/public/admin" />
       <recent name="$PROJECT_DIR$/public/shop/css" />
       <recent name="$PROJECT_DIR$/storage" />
-      <recent name="$PROJECT_DIR$/public/shop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Requests/Attribute" />
       <recent name="$PROJECT_DIR$/app/Model" />
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$/resources/views/commerce/pages" />
@@ -249,7 +261,10 @@
       <workItem from="1565534275743" duration="1187000" />
       <workItem from="1566120279454" duration="5839000" />
       <workItem from="1566127922574" duration="7532000" />
-      <workItem from="1566137209766" duration="6834000" />
+      <workItem from="1566137209766" duration="7721000" />
+      <workItem from="1566202616778" duration="16742000" />
+      <workItem from="1566232024233" duration="4272000" />
+      <workItem from="1566284645719" duration="1206000" />
     </task>
     <servers />
   </component>
@@ -296,6 +311,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php</url>
           <line>3</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/attributes/index.blade.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
