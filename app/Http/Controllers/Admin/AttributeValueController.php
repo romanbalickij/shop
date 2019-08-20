@@ -51,7 +51,12 @@ class AttributeValueController extends BaseController
      */
     public function store(AttributeValueRequest $request)
     {
-        dd($request->all());
+          $attributeValue =  AttributeValue::createAttributeValue($request->all());
+
+        if(!$attributeValue){
+            return  $this->responseRedirectBack('Error occurred while creating attribute Values.', 'error', true, true);
+        }
+          return  $this->responseRedirect('attribute-values.index','Attribute  Values added successfully' ,'success',false, false);
     }
 
     /**
@@ -62,7 +67,10 @@ class AttributeValueController extends BaseController
      */
     public function edit($id)
     {
-        //
+        $attributeValue  = AttributeValue::findOrFail($id);
+        $attributes      = $this->attributeRepository->listAttributes();
+        $this->setPageTitle('Attribute Values', 'Edit Attribute Values');
+        return  view('admin.attributes_values.edit', compact('attributeValue', 'attributes'));
     }
 
     /**
@@ -72,9 +80,15 @@ class AttributeValueController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AttributeValueRequest $request, $id)
     {
-        //
+        $attributeValue = AttributeValue::updateAttributeValue($request->all(), $id);
+
+        if(!$attributeValue){
+            return  $this->responseRedirectBack('Error occurred while update attribute Values.', 'error', true, true);
+        }
+        return  $this->responseRedirectBack('Attribute  Values update successfully' ,'success',false, false);
+
     }
 
     /**
@@ -85,6 +99,11 @@ class AttributeValueController extends BaseController
      */
     public function destroy($id)
     {
-        //
+        $attributeValue = AttributeValue::deleteAttributeValue($id);
+
+        if (!$attributeValue) {
+            return $this->responseRedirectBack('Error occurred while deleting attribute.', 'error', true, true);
+        }
+        return $this->responseRedirect('attribute-values.index', 'Attribute Value deleted successfully' ,'success',false, false);
     }
 }

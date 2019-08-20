@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Contracts/AttributeContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/AttributeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/axios.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/front.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AttributeValueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AttributeValueController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Attribute/AttributeValueRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Attribute/AttributeValueRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/AttributeValue.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AttributeValue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_30_165803_create_attribute_values_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_30_165803_create_attribute_values_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_25_135025_create_attribute_value_product_attribute_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_25_135025_create_attribute_value_product_attribute_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/attributes_values/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +249,7 @@
       <workItem from="1566137209766" duration="7721000" />
       <workItem from="1566202616778" duration="16742000" />
       <workItem from="1566232024233" duration="4272000" />
-      <workItem from="1566284645719" duration="1206000" />
+      <workItem from="1566284645719" duration="6674000" />
     </task>
     <servers />
   </component>

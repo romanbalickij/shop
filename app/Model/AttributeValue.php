@@ -36,4 +36,27 @@ class AttributeValue extends Model
         }
            return 'The attribute is offset';
     }
+
+    public  static  function createAttributeValue($param)
+    {
+        $attributeValue = new static();
+        $attributeValue->fill($param);
+        $attributeValue->save();
+        return $attributeValue;
+    }
+
+    public static function updateAttributeValue($param, $id) {
+
+        $attributeValue = AttributeValue::findOrFail($id);
+        $attributeValue->update($param);
+        return $attributeValue;
+    }
+
+    public static function deleteAttributeValue($id)
+    {
+        $attributeValue  = AttributeValue::findOrFail($id);
+        $attributeValue->delete();
+        return $attributeValue;
+    }
+
 }

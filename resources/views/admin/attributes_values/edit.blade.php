@@ -26,7 +26,7 @@
                     <div class="box-body">
                         <div class="">
                             <div class="box-header">
-                                <h2 class="box-title">Create Attribute</h2>
+                                <h2 class="box-title">Edit Attribute- Values</h2>
                             </div>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -37,20 +37,21 @@
                                     </ul>
                                 </div>
                         @endif
-                            <!-- /.box-header -->
+                        <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="col-md-6">
-                                    <form action="{{route('attribute-values.store')}}" method="post">
+                                    <form action="{{route('attribute-values.update', $attributeValue->id)}}" method="post">
                                         @csrf
+                                        @method('PATCH')
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Name</label>
-                                            <input type="text"  name="value" class="form-control" id="exampleInputEmail1" >
+                                            <input type="text"  name="value"  value="{{old('value', $attributeValue->value)}}" class="form-control" id="exampleInputEmail1" >
                                         </div>
                                         <div class="form-group">
                                             <label>Select Attribute Name</label>
                                             <select class="form-control select2" name="attribute_id" style="width: 100%;">
                                                 @foreach($attributes as $attribute)
-                                                    <option value="{{$attribute->id}}">{{$attribute->name}}</option>
+                                                    <option value="{{$attribute->id}}" {{($attributeValue->attribute_id == $attribute->id) ?'selected' : ""}}>{{$attribute->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
