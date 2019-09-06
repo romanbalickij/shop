@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31457e2e-50c7-4399-ac2e-45cecbbf1ee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AttributeValueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AttributeValueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Attribute/AttributeValueRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Attribute/AttributeValueRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/AttributeValue.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AttributeValue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/attributes_values/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/attributes_values/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +244,8 @@
       <workItem from="1566137209766" duration="7721000" />
       <workItem from="1566202616778" duration="16742000" />
       <workItem from="1566232024233" duration="4272000" />
-      <workItem from="1566284645719" duration="6674000" />
+      <workItem from="1566284645719" duration="8005000" />
+      <workItem from="1566320511680" duration="14000" />
     </task>
     <servers />
   </component>
